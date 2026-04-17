@@ -163,21 +163,6 @@ Analyze resume + job description.
 }
 ```
 
----
-
-## 📷 Screenshots
-
-### 🔐 Register Page
-![Register Page](screenshots/register-page.png)
-
-### 🧠 Interview Plan Generation
-![Interview Plan](screenshots/interview-plan-page.png)
-
-### 🤖 AI Analysis & Interview Questions
-![AI Analysis](screenshots/ai-analysis-results.png)
-
-### 📄 Generated ATS Resume (PDF)
-![Resume](screenshots/generated-resume.png)
 
 ---
 
