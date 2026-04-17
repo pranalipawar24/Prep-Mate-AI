@@ -1,167 +1,206 @@
-🚀 PrepMate AI – GenAI Job Preparation Platform
-# 🚀 PrepMate AI
+# 🚀 PrepMate AI – GenAI Job Preparation Platform
 
-PrepMate AI is a **production-ready full stack GenAI web application** designed to help users prepare for jobs intelligently.  
+A smart **AI-powered job preparation platform** that helps users analyze resumes, detect skill gaps, and prepare for interviews using **GenAI**.
 
-It enables users to upload resumes, analyze job descriptions, identify skill gaps, and generate **AI-powered interview questions and ATS-optimized resumes**.
-
-This project simulates a **real-world job preparation platform** using modern technologies like React, Node.js, JWT authentication, and Gemini AI.
+This project simulates a real-world system where users can upload resumes, compare them with job descriptions, and generate **ATS-optimized resumes and interview questions**.
 
 ---
 
-## ✨ Key Features
+## 📌 Features
 
-- 🔐 **Secure Authentication**
-  - JWT-based authentication
-  - Token blacklisting for logout security
-
-- 📄 **Resume Upload & Parsing**
-  - Extracts skills and information from resumes
-
-- 🧠 **AI-Powered Analysis (Gemini)**
-  - Job description analysis
-  - Skill gap detection
-  - Smart recommendations
-
-- 🎯 **Interview Preparation**
-  - AI-generated interview questions based on skills & job role
-
-- 📊 **Skill Gap Detection**
-  - Compares resume vs job description
-  - Suggests missing skills
-
-- 📑 **ATS-Optimized Resume Generation**
-  - Improves resume for better job matching
-
-- 📄 **Dynamic PDF Generation**
-  - Uses Puppeteer for professional resume export
+* ✅ Secure user authentication using JWT
+* 📄 Upload and process resumes
+* 🤖 AI-powered resume analysis using Gemini
+* 🎯 Skill gap detection (Resume vs Job Description)
+* 🧠 AI-generated interview questions
+* 📑 ATS-optimized resume generation
+* 📄 PDF export using Puppeteer
+* 🔐 Token blacklisting for enhanced security
+* 🧩 Scalable full-stack architecture
 
 ---
 
-## 🏗️ Tech Stack
+## ⚙️ Tech Stack
 
-### Frontend
-- React.js
-
-### Backend
-- Node.js
-- Express.js
-
-### Authentication
-- JWT (JSON Web Token)
-- Token Blacklisting
-
-### AI Integration
-- Gemini API (Google GenAI)
-
-### Other Tools
-- Puppeteer (PDF generation)
-- MongoDB (Database)
+| Component        | Technology               |
+| ---------------- | ------------------------ |
+| Frontend         | React.js                 |
+| Backend          | Node.js + Express.js     |
+| Authentication   | JWT + Token Blacklisting |
+| Database         | MongoDB                  |
+| AI Integration   | Gemini API               |
+| PDF Generation   | Puppeteer                |
+| Environment Mgmt | dotenv                   |
 
 ---
 
-## 🧩 System Architecture
+## 🧠 How It Works
 
+1. User registers/login securely
+2. Uploads resume
+3. System extracts key information and skills
+4. User inputs job description
+5. AI (Gemini) analyzes:
 
-Client (React)
-↓
-API Layer (Express.js)
-↓
-Authentication (JWT + Blacklist)
-↓
-Business Logic
-↓
-AI Layer (Gemini API)
-↓
-Database (MongoDB)
+   * Resume content
+   * Job requirements
+6. Platform:
 
+   * Detects missing skills
+   * Suggests improvements
+   * Generates interview questions
+7. User downloads ATS-optimized resume (PDF)
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
-
+```
 PrepMate_AI/
 │
-├── client/ # React frontend
-├── server/ # Backend (Node + Express)
-│ ├── controllers/
-│ ├── routes/
-│ ├── models/
-│ ├── middleware/
-│ └── utils/
+├── client/                  # React frontend
+├── server/                  # Backend (Node + Express)
+│   ├── controllers/         # Business logic
+│   ├── routes/              # API routes
+│   ├── models/              # DB schemas
+│   ├── middleware/          # Auth middleware
+│   ├── utils/               # Helper functions (AI, parsing)
 │
-├── uploads/ # Resume files
-├── config/ # DB & environment config
-├── .env
+├── uploads/                 # Uploaded resumes
+├── config/                  # DB & environment config
+├── .env                     # Environment variables
 ├── package.json
-└── README.md
-
+├── README.md
+```
 
 ---
 
-## ⚙️ Installation & Setup
+## 🚀 Getting Started
 
-### 1️⃣ Clone the repository
+### 🔧 1. Clone the Repo
+
 ```bash
-git clone https://github.com/your-username/PrepMate_AI.git
+git clone https://github.com/pranalipawar24/PrepMate_AI.git
 cd PrepMate_AI
-2️⃣ Install dependencies
-Backend
+```
+
+---
+
+### 📦 2. Install Dependencies
+
+#### Backend
+
+```bash
 cd server
 npm install
-Frontend
+```
+
+#### Frontend
+
+```bash
 cd client
 npm install
-3️⃣ Setup Environment Variables
+```
 
-Create a .env file in the server folder:
+---
 
+### 🔐 3. Setup .env File
+
+Create a `.env` file inside the `server` folder:
+
+```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 GEMINI_API_KEY=your_gemini_api_key
-4️⃣ Run the Application
-Start backend
+```
+
+---
+
+### ▶️ 4. Run the Application
+
+#### Start Backend
+
+```bash
 cd server
 npm run dev
-Start frontend
+```
+
+#### Start Frontend
+
+```bash
 cd client
 npm start
-🚀 How It Works
-User registers/login securely using JWT
-Uploads resume
-System extracts skills from resume
-User provides job description
-AI analyzes both inputs using Gemini
-Platform:
-Detects skill gaps
-Suggests improvements
-Generates interview questions
-User can download ATS-optimized resume as PDF
-🔒 Security Features
-JWT Authentication
-Token Blacklisting (prevents reuse after logout)
-Secure environment variables
-Protected API routes
-🧪 Pre-Launch Checks
-✅ API testing (Postman)
-✅ Resume parsing accuracy validation
-✅ AI response testing
-✅ JWT security validation
-📈 Future Enhancements
-🔊 Voice-based interview practice
-📱 Mobile responsive / app version
-📊 Advanced analytics dashboard
-🌍 Multi-language support
-🤝 Real-time mentor feedback
-🤝 Contributing
+```
 
-Contributions are welcome!
-Fork the repo and submit a pull request 🚀
+---
 
-👩‍💻 Author
+## 📤 API Endpoints (Sample)
 
-Pranali Pawar
+### 📍 POST `/upload-resume`
 
-GitHub: https://github.com/pranalipawar24
+Upload user resume.
+
+**Response:**
+
+```json
+{ "message": "Resume uploaded successfully" }
+```
+
+---
+
+### 📍 POST `/analyze`
+
+Analyze resume + job description.
+
+**Response:**
+
+```json
+{
+  "missing_skills": ["Docker", "System Design"],
+  "suggestions": ["Improve project descriptions"],
+  "interview_questions": ["Explain REST APIs", "What is JWT?"]
+}
+```
+
+---
+
+## 📷 Screenshots
+
+### 🔐 Register Page
+![Register Page](screenshots/register-page.png)
+
+### 🧠 Interview Plan Generation
+![Interview Plan](screenshots/interview-plan-page.png)
+
+### 🤖 AI Analysis & Interview Questions
+![AI Analysis](screenshots/ai-analysis-results.png)
+
+### 📄 Generated ATS Resume (PDF)
+![Resume](screenshots/generated-resume.png)
+
+---
+
+## 🧠 Future Improvements
+
+* 📱 Mobile-friendly UI
+* 🔊 Voice-based interview practice
+* 📊 Advanced analytics dashboard
+* 🌍 Multi-language support
+* 🤝 Real-time mentor feedback
+
+---
+
+## 👩‍💻 Author
+
+**Pranali Pawar**
+[GitHub Profile](https://github.com/pranalipawar24)
+Computer Engineering Student
+
+---
+
+## 🛡 License
+
+This project is licensed under the MIT License.
+
+---
