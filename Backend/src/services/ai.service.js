@@ -41,29 +41,14 @@ async function generateInterviewReport({ resume, selfDescription, jobDescription
                         Job Description: ${jobDescription}
 `
 
-    let response
-
-    for (let attempt = 1; attempt <= 3; attempt++) {
-        try {
-            response = await ai.models.generateContent({
-                model: "gemini-3-flash-preview",
-                contents: prompt,
-                config: {
-                    responseMimeType: "application/json",
-                    responseSchema: zodToJsonSchema(resumePdfSchema),
-                }
-            })
-
-            break
-        } catch (error) {
-            if (error?.status === 503 && attempt < 3) {
-                console.log(`Gemini unavailable. Retrying... Attempt ${attempt + 1}`)
-                await new Promise(resolve => setTimeout(resolve, attempt * 3000))
-            } else {
-                throw error
-            }
-        }
+    const response = await ai.models.generateContent({
+    model: "gemini-3-flash-preview",
+    contents: prompt,
+    config: {
+        responseMimeType: "application/json",
+        responseSchema: zodToJsonSchema(resumePdfSchema),
     }
+})
 
     return JSON.parse(response.text)
 
