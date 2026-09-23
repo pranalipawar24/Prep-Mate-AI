@@ -514,8 +514,4 @@ Computer Engineering Student
 GitHub:  
 https://github.com/pranalipawar24
 
----
 
-## 📄 License
-
-This project is licensed under the MIT License.
